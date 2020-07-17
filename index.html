@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Layout Template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Create two columns/boxes that floats next to each other */
+      .topnav {
+        overflow: hidden;
+        background-color: #f7a6f3;
+      }
+      .topnav .ul {
+        list-style-type: none;
+        margin: 10;
+        padding: 10;
+      }
+      nav li {
+        float: left;
+      }
+      nav li:hover {
+        background-color: rgb(189, 216, 216);
+      }
+      nav li a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 14px 50px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      nav li a:hover {
+        color: red;
+      }
+
+      .topnav .search-container {
+        float: right;
+      }
+
+      .topnav input[type="text"] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+      }
+
+      .topnav .search-container button {
+        float: right;
+        padding: 6px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .topnav .search-container button:hover {
+        background: #ccc;
+      }
+
+      article {
+        float: left;
+        padding: 10px;
+        width: 80%;
+        height: 450px; /* only for demonstration, should be removed */
+      }
+
+      .solid {
+        border: 3px solid #c378de;
+      }
+      aside {
+        float: left;
+        width: 20%;
+        height: 450px; /* only for demonstration, should be removed */
+        background: #f7a6f3;
+        padding: 50px;
+      }
+      /* Clear floats after the columns */
+      section:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Style the footer */
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align: center;">Farhana's second layout</h1>
+      <nav class="topnav">
+        <ul class="ul">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <article class="solid">
+        <h1 style="text-align: center;">Main Content</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h1>Subsection</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+          augue in luctus rhoncus, turpis augue pharetra eros, ut convallis
+          lectus diam id ipsum. Quisque luctus, diam at lacinia dictum, metus
+          lorem condimentum velit, in dignissim dolor orci tristique arcu.
+        </p>
+        <h1>Another Subsection</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+          augue in luctus rhoncus, turpis augue pharetra eros, ut convallis
+          lectus diam id ipsum. Quisque luctus, diam at lacinia dictum, metus
+          lorem condimentum velit, in dignissim dolor orci tristique arcu.
+        </p>
+      </article>
+      <aside class="solid">
+        <h1>Related</h1>
+        <ul>
+          <li><a href="#home">I am Farhana</a></li>
+          <br />
+          <li><a href="#home">I love designing</a></li>
+          <br />
+          <li><a href="#home">About us</a></li>
+          <br />
+        </ul>
+      </aside>
+    </section>
+
+    <footer>
+      <p>&copy copyright 2020 by Farhana Afrin | All rights preserved</p>
+    </footer>
+  </body>
+</html>
